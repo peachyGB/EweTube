@@ -1,14 +1,16 @@
-// Link to Home Child Component
-// Link to Upload Video Form Component
-// Link to Favorites Component
-
-
-import React from 'react'
+import React from "react";
+import Home from "./Home";
+import Favorites from "./Favorites";
+import UploadForm from "./UploadForm";
 
 function NavBar() {
   return (
-    <div>NavBar</div>
-  )
+    <h4>
+      <Home />
+      <Favorites />
+      <UploadForm />
+    </h4>
+  );
 }
 
-export default NavBar
+export default NavBar;
