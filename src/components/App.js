@@ -21,6 +21,7 @@ function App() {
           <NavBar />
         </Route>
       </Switch>
+
     </div>
   );
 }
