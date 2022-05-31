@@ -14,8 +14,9 @@ function VideoCard({ channel, description, likes, link, title }) {
         //  description={description}
       />
       {/* <button className="like-btn" style="font-size:100px;">
-        &#128017
+        Like
       </button> */}
+      <button className="like-btn">🐑</button>
     </div>
   );
 }
