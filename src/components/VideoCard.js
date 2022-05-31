@@ -6,12 +6,16 @@ function VideoCard({ channel, description, likes, link, title }) {
     <div className="card">
       <h3>{title}</h3>
       <iframe
-        width="200"
-        height="200"
+        width="240"
+        height="135"
         src={link}
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
+        controls="0"
+        modestbranding="1"
+        loading="eager"
+
         //  description={description}
       />
     </div>
