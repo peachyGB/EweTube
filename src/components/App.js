@@ -1,5 +1,6 @@
 // Parent Component
 
+
 // import "./App.css";
 import React, {useState, useEffect} from "react"
 import Header from "./Header"
@@ -19,8 +20,9 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header" >eweTube</header>
+      <header className="App-header">eweTube</header>
       <NavBar />
+
       <Home videos={videos} />
       {/* <Switch>
         <Route path="/Header" >
@@ -33,6 +35,7 @@ function App() {
           <Home videos={videos} />
         </Route> */}
       {/* </Switch> */}
+
 
     </div>
   );
