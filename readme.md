@@ -31,6 +31,9 @@ Never really took the time to understand how these were all working togeather , 
       title="Embedded youtube"
     />
   </div> -->
+  
+#Logo
+<img width="419" alt="Screen Shot 2022-05-27 at 2 22 29 PM (1)" src="https://user-images.githubusercontent.com/102488171/171209726-a80b5b45-7a9f-42f1-9f9b-95df47fb9655.png">
 
 
 # Getting Started with Create React App
