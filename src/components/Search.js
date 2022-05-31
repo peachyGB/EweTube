@@ -1,7 +1,27 @@
-import React from "react";
+import React, {useState} from "react";
 
-function Search() {
-  return <h3>Search</h3>;
+function Search({onNewSearch}) {
+  const [newSearch, setNewSearch] = useState('')
+  function handleSearch(e) {
+    e.preventDefault()
+    onNewSearch(newSearch)
+    
+  }
+
+  return (
+    <form className='search-bar' onSubmit={handleSearch} >
+      <input
+        type='text'
+        id='search'
+        placeholder='Search...'
+        value={newSearch}
+        onChange={e => setNewSearch(e.target.value)}
+        />
+        
+      <button type='subimt'>🔍</button>
+    </form>
+  
+  )
 }
 
 export default Search;

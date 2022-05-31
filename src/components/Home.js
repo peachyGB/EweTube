@@ -5,7 +5,6 @@ import React from "react";
 import VideoCard from "./VideoCard"
 
 function Home({videos}) {
-  console.log('hi')
   const postVideos = videos.map((video) => 
     <VideoCard 
       key={video.id}
@@ -18,7 +17,6 @@ function Home({videos}) {
       videos={videos}
       />
   )
-  console.log(postVideos)
 
   return (
   <div>
