@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function Search() {
-  return (
-    <div>Search</div>
-  )
+  return <h3>Search</h3>;
 }
 
-export default Search
+export default Search;
