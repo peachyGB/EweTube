@@ -3,7 +3,7 @@ import React from "react"
 import Header from "./Header"
 import Search from "./Search"
 import NavBar from "./NavBar"
-import {Route, Switch} from "react-route-dom"
+import {Route, Switch} from "react-router-dom"
 
 function App() {
   return (
