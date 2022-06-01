@@ -1,7 +1,6 @@
 import React from "react";
 
 function VideoCard({ channel, description, likes, link, title }) {
-
   return (
     <div className="card">
       <h3>{title}</h3>
@@ -20,7 +19,6 @@ function VideoCard({ channel, description, likes, link, title }) {
       />
 
       <button className="like-btn">🐑</button>
-
     </div>
   );
 }

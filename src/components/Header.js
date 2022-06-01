@@ -1,8 +1,7 @@
 import React from "react";
 import Search from "./Search";
-import NavBar from "./NavBar";
 
-function Header({ search, onNewSearch, videos, postVideo }) {
+function Header({ search, onNewSearch }) {
   return (
     <div>
       <img
@@ -11,7 +10,7 @@ function Header({ search, onNewSearch, videos, postVideo }) {
         alt="Screen Shot 2022-05-27 at 2 22 29 PM (1)"
         src="https://user-images.githubusercontent.com/102488171/171234003-914dba64-c172-421b-b637-43f43ea66150.jpg"
       ></img>
-      <NavBar videos={videos} postVideo={postVideo} />
+
       <Search search={search} onNewSearch={onNewSearch} />
     </div>
   );

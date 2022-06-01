@@ -1,11 +1,5 @@
-// Link to Upload Video Form Component
-// Link to Favorites Component
-
 import React from "react";
-import Home from "./Home";
-import UploadForm from "./UploadForm";
-import Favorites from "./Favorites";
-// import {NavLink} from "react-router-dom"
+import { NavLink } from "react-router-dom";
 
 // Can put styling directly into the component like this so that all NavBar links are controlled here.
 // const linkStyles = {
@@ -18,12 +12,12 @@ import Favorites from "./Favorites";
 //   color: 'white'
 // }
 
-function NavBar({ videos, postVideo }) {
+function NavBar() {
   return (
     <div>
-      <Home videos={videos} />
-      <UploadForm postVideo={postVideo} />
-      <Favorites />
+      <NavLink exact to="/"> Home </NavLink>
+      <NavLink to="/upload"> Upload Video </NavLink>
+      <NavLink to="/mylikes"> My Likes </NavLink>
     </div>
   );
 }
