@@ -8,7 +8,6 @@ import Home from "./Home";
 import UploadForm from "./UploadForm";
 import MyLikes from "./MyLikes";
 import NavBar from "./NavBar";
-import VideoPage from "./VideoPage";
 
 // import {Route, Switch} from "react-router-dom"
 
@@ -42,10 +41,6 @@ function App() {
 
         <Route path="/mylikes">
           <MyLikes />
-        </Route>
-
-        <Route path="/videos/:id">
-          <VideoPage />
         </Route>
 
         <Route exact path="/">

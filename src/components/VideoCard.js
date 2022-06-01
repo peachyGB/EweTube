@@ -1,25 +1,23 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
-function VideoCard({ likes, link, title, id }) {
+function VideoCard({ channel, description, likes, link, title }) {
   return (
     <div className="card">
-      <Link to={`videos/${id}`}>
-        <h3>{title}</h3>
-      </Link>
-      <Link to={`videos/${id}`}>
-        <iframe
-          width="240"
-          height="135"
-          src={link}
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-          controls="0"
-          modestbranding="1"
-          loading="eager"
-        />
-      </Link>
+      <h3>{title}</h3>
+      <iframe
+        width="240"
+        height="135"
+        src={link}
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+        controls="0"
+        modestbranding="1"
+        loading="eager"
+
+        //  description={description}
+      />
+
       <button className="like-btn">🐑</button>
     </div>
   );
