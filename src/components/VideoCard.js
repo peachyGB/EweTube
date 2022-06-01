@@ -14,8 +14,6 @@ function VideoCard({ channel, description, likes, link, title }) {
         controls="0"
         modestbranding="1"
         loading="eager"
-
-        //  description={description}
       />
 
       <button className="like-btn">🐑</button>

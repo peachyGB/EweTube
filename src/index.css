@@ -13,7 +13,7 @@ code {
 }
 
 .App {
-  text-align: left;
+  text-align: center;
 }
 
 .App-logo {
@@ -26,8 +26,8 @@ code {
   min-height: 1vh;
   display: flex;
   flex-direction: column;
-  align-items: left;
-  justify-content: left;
+  align-items: center;
+  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
   padding: 10px;
