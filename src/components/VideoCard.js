@@ -1,9 +1,12 @@
 import React from "react";
-import {Link} from "react-router-dom"
+
+import { Link } from "react-router-dom";
+
 
 function VideoCard({ id, likes, link, title }) {
   return (
     <div className="card">
+
       <Link to={`videos/${id}`}>
         <h3 class="fs-6" >{title}</h3>
       </Link>
@@ -20,11 +23,13 @@ function VideoCard({ id, likes, link, title }) {
           loading="eager"
         />
       </Link>
+
       <div>
         <button 
           className="like-btn">🐑, 
         </button>
       </div>
+
     </div>
   );
 }
