@@ -1,45 +1,54 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-function VideoCard({ id, likes, link, title }) {
+function VideoCard({ id, liked, likeCount, link, title, video, onVideoLike }) {
+  const [isLiked, setIsLiked] = useState(false);
+  function handleLike() {
+    onVideoLike(video);
+    setIsLiked(!isLiked);
+  }
+
   return (
       <div className="card">
         <Link className="title" style={{textDecoration: "none"}} to={`videos/${id}`}>
           <h6>{title}</h6>
         </Link>
         <Link className="videos" to={`videos/${id}`} style={{textDecoration: "none"}}>
-          <iframe
-            width="240"
-            height="150"
-            src={link}
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            controls="0"
-            modestbranding="1"
-            loading="eager"
-          />
-        </Link>
-        <div>
-          <button 
-            className="like-btn">🐑, 
-          </button>
-        </div>
+        <iframe
+          width="240"
+          height="135"
+          src={link}
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          controls="0"
+          modestbranding="1"
+          loading="eager"
+        />
+      </Link>
+
+      <div>
+        <div>Likes: </div>
+        <button
+          className={isLiked ? "un-like-btn" : "like-btn"}
+          onClick={handleLike}
+        >
+          🐑,
+        </button>
+        <div>{likeCount}</div>
       </div>
+    </div>
   );
 }
 
 export default VideoCard;
 
-{
-  /* <iframe
-  width="560"
-  height="315"
-  src="https://www.youtube.com/embed/Drmj1RfD3JY"
-  title="YouTube video player"
-  frameborder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowfullscreen
-></iframe>; */
-}
+
+//likes button gets clicked:
+//1. sheep flips
+//1. if isliked ? newLikes -- : newLikes ++
+//2. PATCH request to change likesCount to newLikes && and change liked to !liked
+//3. server response replaces object in videos array (.map())
+//4. state refreshes page to show new likes count
+//5. render MyLikes with .filter(isliked:true)
 
