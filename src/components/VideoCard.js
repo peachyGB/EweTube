@@ -1,15 +1,14 @@
 import React from "react";
+
 import { Link } from "react-router-dom";
+
 
 function VideoCard({ id, likes, link, title }) {
   return (
     <div className="card">
-      <button width="40" height="40" className="like-btn">
-        🐑
-      </button>
 
       <Link to={`videos/${id}`}>
-        <h3>{title}</h3>
+        <h3 class="fs-6" >{title}</h3>
       </Link>
       <Link to={`videos/${id}`}>
         <iframe
@@ -24,6 +23,13 @@ function VideoCard({ id, likes, link, title }) {
           loading="eager"
         />
       </Link>
+
+      <div>
+        <button 
+          className="like-btn">🐑, 
+        </button>
+      </div>
+
     </div>
   );
 }

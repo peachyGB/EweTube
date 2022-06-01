@@ -15,7 +15,7 @@ import { NavLink } from "react-router-dom";
 function NavBar() {
   return (
     <div>
-      <NavLink exact to="/"> Home </NavLink>
+      <NavLink exact to="/" > Home </NavLink>
       <NavLink to="/upload"> Upload Video </NavLink>
       <NavLink to="/mylikes"> My Likes </NavLink>
     </div>
