@@ -1,15 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-function VideoCard({ channel, description, likes, link, title }) {
+function VideoCard({ id, likes, link, title }) {
   return (
     <div className="card">
-
-
-
-      <button 
-        width='40'
-        height='40'
-        className="like-btn">🐑</button>
+      <button width="40" height="40" className="like-btn">
+        🐑
+      </button>
 
       <Link to={`videos/${id}`}>
         <h3>{title}</h3>
@@ -27,7 +24,6 @@ function VideoCard({ channel, description, likes, link, title }) {
           loading="eager"
         />
       </Link>
-
     </div>
   );
 }
