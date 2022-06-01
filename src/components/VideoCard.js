@@ -9,11 +9,11 @@ function VideoCard({ id, liked, likeCount, link, title, video, onVideoLike }) {
   }
 
   return (
-    <div className="card">
-      <Link to={`videos/${id}`}>
-        <h3 class="fs-6">{title}</h3>
-      </Link>
-      <Link to={`videos/${id}`}>
+      <div className="card">
+        <Link className="title" style={{textDecoration: "none"}} to={`videos/${id}`}>
+          <h6>{title}</h6>
+        </Link>
+        <Link className="videos" to={`videos/${id}`} style={{textDecoration: "none"}}>
         <iframe
           width="240"
           height="135"
@@ -43,6 +43,7 @@ function VideoCard({ id, liked, likeCount, link, title, video, onVideoLike }) {
 
 export default VideoCard;
 
+
 //likes button gets clicked:
 //1. sheep flips
 //1. if isliked ? newLikes -- : newLikes ++
@@ -50,3 +51,4 @@ export default VideoCard;
 //3. server response replaces object in videos array (.map())
 //4. state refreshes page to show new likes count
 //5. render MyLikes with .filter(isliked:true)
+

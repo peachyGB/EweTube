@@ -36,8 +36,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header"></header>
-      <Header search={search} onNewSearch={setSearch} />
-      <NavBar />
+      <NavBar search={search} onNewSearch={setSearch} />
       <Switch>
         <Route path="/upload">
           <UploadForm postVideo={postVideo} />

@@ -1,23 +1,33 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
+import Search from './Search'
 
-// Can put styling directly into the component like this so that all NavBar links are controlled here.
-// const linkStyles = {
-//   display: 'inline-block',
-//   width: '50px',
-//   padding: '12px',
-//   margin: '0 6px 6 px',
-//   backgroundf: 'blue',
-//   textDecoration: 'none',
-//   color: 'white'
-// }
-
-function NavBar() {
+function NavBar({ search, onNewSearch }) {
   return (
-    <div>
-      <NavLink exact to="/" > Home </NavLink>
-      <NavLink to="/upload"> Upload Video </NavLink>
-      <NavLink to="/mylikes"> My Likes </NavLink>
+    <div class="navbar navbar navbar-light">
+      <div class="container-fluid">
+            <img
+              className="logo"
+              width="250"
+              alt="EweTube Logo"
+              src="https://user-images.githubusercontent.com/102488171/171423652-eed342aa-236c-4e11-a6af-9785c6e4654d.png"
+            />
+              <div className='search-bar'>
+                <Search search={search} onNewSearch={onNewSearch} />
+              </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+            <div class="navbar-nav me-auto">
+            <div class="nav-item">
+                <Link exact to="/"  class="nav-link"> Home </Link>
+                <Link to="/upload" class="nav-link"> Upload Video </Link>
+                <Link to="/mylikes" class="nav-link"> My Likes </Link>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

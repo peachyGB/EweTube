@@ -22,7 +22,7 @@ code {
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: white;
   min-height: 1vh;
   display: flex;
   flex-direction: column;
@@ -44,14 +44,21 @@ code {
   margin: 1rem 2rem;
   box-shadow: 3px 4px #282c34;
   background: white;
+  transition: transform .2s;
+}
+
+.card:hover {
+  transform: scale(1.1);
 }
 
 .search-bar {
   overflow: hidden;
-  background-color: #e9e9e9;
-  position: absolute;
-  top: 20px;
-  left: 200px;
+  background-color: white;
+  width: 400px;
+  position: fixed;
+  top: 10%;
+  left: 38%;
+  
 }
 
 .search-icon button {
@@ -72,10 +79,39 @@ code {
 .like-btn {
   width: 40;
   height: 40;
+  background-color: red;
+  position: relative;
+  bottom: 50px;
+  left: 150px;
 }
 
 .un-like-btn {
   width: 40;
   height: 40;
   transform: rotate(180deg);
+}
+
+.form {
+  display: inline-block;
+  text-align: center;
+  overflow-wrap: break-word;
+  width: 50em;
+  margin: 50px;
+}
+
+.label {
+  margin-left: 10px;
+}
+
+.title {
+  white-space: nowrap;
+  width: 350px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: black;
+}
+
+.videos {
+  position: relative;
+  top: 20px;
 }
