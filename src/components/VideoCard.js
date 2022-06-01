@@ -1,28 +1,16 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
-function VideoCard({ likes, link, title, id }) {
+function VideoCard({ channel, description, likes, link, title }) {
   return (
     <div className="card">
-<<<<<<< HEAD
-      <h3>{title}</h3>
-      <iframe
-        width="240"
-        height="135"
-        src={link}
-        frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-        controls="0"
-        modestbranding="1"
-        loading="eager"
-      />
+
+
 
       <button 
         width='40'
         height='40'
         className="like-btn">🐑</button>
-=======
+
       <Link to={`videos/${id}`}>
         <h3>{title}</h3>
       </Link>
@@ -39,8 +27,7 @@ function VideoCard({ likes, link, title, id }) {
           loading="eager"
         />
       </Link>
-      <button className="like-btn">🐑</button>
->>>>>>> d2f899d91788e1b786c3d605dccb2f574db9418b
+
     </div>
   );
 }
