@@ -6,7 +6,7 @@ function Header({ search, onNewSearch }) {
     <div className='header'>
       <img
         className="logo"
-        width="200"
+        width="250"
         alt="EweTube Logo"
         src="https://user-images.githubusercontent.com/102488171/171423652-eed342aa-236c-4e11-a6af-9785c6e4654d.png"
       ></img>
