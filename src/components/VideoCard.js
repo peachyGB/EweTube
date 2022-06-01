@@ -1,14 +1,17 @@
-import React from "react";
-
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
+function VideoCard({ id, liked, likeCount, link, title, video, onVideoLike }) {
+  const [isLiked, setIsLiked] = useState(false);
+  function handleLike() {
+    onVideoLike(video);
+    setIsLiked(!isLiked);
+  }
 
-function VideoCard({ id, likes, link, title }) {
   return (
     <div className="card">
-
       <Link to={`videos/${id}`}>
-        <h3 class="fs-6" >{title}</h3>
+        <h3 class="fs-6">{title}</h3>
       </Link>
       <Link to={`videos/${id}`}>
         <iframe
@@ -25,25 +28,25 @@ function VideoCard({ id, likes, link, title }) {
       </Link>
 
       <div>
-        <button 
-          className="like-btn">🐑, 
+        <div>Likes: </div>
+        <button
+          className={isLiked ? "un-like-btn" : "like-btn"}
+          onClick={handleLike}
+        >
+          🐑,
         </button>
+        <div>{likeCount}</div>
       </div>
-
     </div>
   );
 }
 
 export default VideoCard;
 
-{
-  /* <iframe
-  width="560"
-  height="315"
-  src="https://www.youtube.com/embed/Drmj1RfD3JY"
-  title="YouTube video player"
-  frameborder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowfullscreen
-></iframe>; */
-}
+//likes button gets clicked:
+//1. sheep flips
+//1. if isliked ? newLikes -- : newLikes ++
+//2. PATCH request to change likesCount to newLikes && and change liked to !liked
+//3. server response replaces object in videos array (.map())
+//4. state refreshes page to show new likes count
+//5. render MyLikes with .filter(isliked:true)

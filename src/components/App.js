@@ -10,11 +10,14 @@ import MyLikes from "./MyLikes";
 import NavBar from "./NavBar";
 import VideoPage from "./VideoPage";
 
-// import {Route, Switch} from "react-router-dom"
-
 function App() {
   const [videos, setVideos] = useState([]);
   const [search, setSearch] = useState("");
+  const [likedList, setLikedList] = useState([]);
+
+  function onVideoLike(video) {
+    setLikedList([...likedList, video]);
+  }
 
   useEffect(() => {
     fetch("http://localhost:7001/videos")
@@ -41,7 +44,7 @@ function App() {
         </Route>
 
         <Route path="/mylikes">
-          <MyLikes />
+          <MyLikes likedList={likedList} />
         </Route>
 
         <Route path="/videos/:id">
@@ -49,7 +52,7 @@ function App() {
         </Route>
 
         <Route exact path="/">
-          <Home videos={displayVideo} />
+          <Home videos={displayVideo} onVideoLike={onVideoLike} />
         </Route>
         <Route path="*">
           <h2>ERROR: You found a baaad link</h2>
