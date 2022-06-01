@@ -44,15 +44,15 @@ function UploadForm({ postVideo }) {
     <div>
       <h3>Add a Video!</h3>
       <form className="form" onSubmit={handleSubmit}>
-        <label>Title</label>
+        <label className='label'><strong>Title</strong></label>
         <input
           type="text"
           placeholder="Title"
           name="title"
           value={title}
           onChange={handleTitleChange}
-        />
-        <label>Link</label>
+        />  
+        <label className='label'><strong>Link</strong></label>
         <input
           type="link"
           placeholder="Link"
@@ -60,16 +60,16 @@ function UploadForm({ postVideo }) {
           value={link}
           onChange={handleLinkChange}
         />
-        <label>Description</label>
+        <label className='label'><strong>Description</strong></label>
         <input
           type="text"
           placeholder="description"
           name="description"
           value={description}
           onChange={handleDescriptionChange}
-        />
-        <input type="checkbox" onChange={handleChange}></input>
-        <label>
+        /> 
+        <input className='label' type="checkbox" onChange={handleChange}></input>
+        <label >
           I attest that this video is ewe related content and understand that
           falsely identifying unrelated content as ewe related is a violation of
           our terms and conditions and is punishable in a court of baa.

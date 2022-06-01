@@ -8,7 +8,7 @@ function Search({ onNewSearch }) {
   }
 
   return (
-    <form className="search-bar" onSubmit={handleSearch}>
+    <form onSubmit={handleSearch}>
       <input
         type="text"
         id="search"
