@@ -13,7 +13,7 @@ code {
 }
 
 .App {
-  text-align: left;
+  text-align: center;
 }
 
 .App-logo {
@@ -26,8 +26,8 @@ code {
   min-height: 1vh;
   display: flex;
   flex-direction: column;
-  align-items: left;
-  justify-content: left;
+  align-items: center;
+  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
   padding: 10px;
@@ -38,11 +38,11 @@ code {
   text-align: center;
   border: grey solid 1px;
   padding: 1rem;
-  width: 15rem;
-  height: 25rem;
+  width: 25rem;
+  height: 15rem;
   display: inline-grid;
   margin: 1rem 2rem;
-  box-shadow: 3px 4px darkblue;
+  box-shadow: 3px 4px #282c34;
   background: white;
 }
 
@@ -67,4 +67,9 @@ code {
 
 .logo {
   align-items: center;
+}
+
+.like-btn {
+  width: 40;
+  height: 40;
 }
