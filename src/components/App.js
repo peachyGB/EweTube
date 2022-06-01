@@ -31,7 +31,7 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">eweTube</header>
+      <header className="App-header"></header>
       <Header search={search} onNewSearch={setSearch} />
       <NavBar />
       <Switch>

@@ -3,12 +3,12 @@ import Search from "./Search";
 
 function Header({ search, onNewSearch }) {
   return (
-    <div>
+    <div className='header'>
       <img
         className="logo"
-        width="100"
-        alt="Screen Shot 2022-05-27 at 2 22 29 PM (1)"
-        src="https://user-images.githubusercontent.com/102488171/171234003-914dba64-c172-421b-b637-43f43ea66150.jpg"
+        width="200"
+        alt="EweTube Logo"
+        src="https://user-images.githubusercontent.com/102488171/171423652-eed342aa-236c-4e11-a6af-9785c6e4654d.png"
       ></img>
 
       <Search search={search} onNewSearch={onNewSearch} />
