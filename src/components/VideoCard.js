@@ -16,7 +16,10 @@ function VideoCard({ channel, description, likes, link, title }) {
         loading="eager"
       />
 
-      <button className="like-btn">🐑</button>
+      <button 
+        width='40'
+        height='40'
+        className="like-btn">🐑</button>
     </div>
   );
 }

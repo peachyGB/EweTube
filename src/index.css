@@ -38,11 +38,11 @@ code {
   text-align: center;
   border: grey solid 1px;
   padding: 1rem;
-  width: 15rem;
-  height: 25rem;
+  width: 25rem;
+  height: 15rem;
   display: inline-grid;
   margin: 1rem 2rem;
-  box-shadow: 3px 4px darkblue;
+  box-shadow: 3px 4px #282c34;
   background: white;
 }
 
@@ -67,4 +67,9 @@ code {
 
 .logo {
   align-items: center;
+}
+
+.like-btn {
+  width: 40;
+  height: 40;
 }
