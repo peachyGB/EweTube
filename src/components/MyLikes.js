@@ -1,16 +1,19 @@
 import React from "react";
 import VideoCard from "./VideoCard";
 
-function MyLikes({ likedList }) {
+function MyLikes({ onVidDislike, likedList, onVidLike }) {
   let postLikes = likedList.map((video) => (
     <VideoCard
       key={video.id}
       id={video.id}
       channel={video.channel}
       description={video.description}
-      likes={video.likes}
+      likeCount={video.likeCount}
+      liked={video.liked}
       link={video.link}
       title={video.title}
+      onVidDislike={onVidDislike}
+      onVidLike={onVidLike}
     />
   ));
   return (
@@ -22,8 +25,3 @@ function MyLikes({ likedList }) {
 }
 
 export default MyLikes;
-
-// create state for likedList (empty array)-- who gets this? need video
-// onClick for sheep button that adds liked sheep to likedList, changes to button to unlike option
-//send liked list to MyLikes page map it out to render
-// add video to liked list

@@ -4,7 +4,7 @@
 import React from "react";
 import VideoCard from "./VideoCard";
 
-function Home({ videos, onVideoLike }) {
+function Home({ videos, onVidLike, onVidDislike }) {
   const postVideos = videos.map((video) => (
     <VideoCard
       key={video.id}
@@ -15,8 +15,8 @@ function Home({ videos, onVideoLike }) {
       liked={video.liked}
       link={video.link}
       title={video.title}
-      video={video}
-      onVideoLike={onVideoLike}
+      onVidLike={onVidLike}
+      onVidDislike={onVidDislike}
     />
   ));
 

@@ -1,9 +1,5 @@
-// Parent Component
-
-// import "./App.css";
 import React, { useState, useEffect } from "react";
 import { Switch, Route } from "react-router-dom";
-import Header from "./Header";
 import Home from "./Home";
 import UploadForm from "./UploadForm";
 import MyLikes from "./MyLikes";
@@ -15,22 +11,45 @@ function App() {
   const [search, setSearch] = useState("");
   const [likedList, setLikedList] = useState([]);
 
-  function onVideoLike(video) {
-    setLikedList([...likedList, video]);
-  }
-
+  //fetches data from server on inital page load
   useEffect(() => {
     fetch("http://localhost:7001/videos")
       .then((response) => response.json())
       .then((videos) => setVideos(videos));
   }, []);
 
+  //SEARCH
   const displayVideo = videos.filter((video) => {
     return video.title.toLowerCase().includes(search.toLowerCase());
   });
 
+  //ADD NEW VIDEO
   function postVideo(newVideo) {
     setVideos([...videos, newVideo]);
+  }
+
+  //LIKE
+  function onVidLike(newLikedVid) {
+    console.log(newLikedVid);
+    console.log(likedList);
+    setLikedList([...likedList, newLikedVid]);
+    console.log(likedList);
+    // setVideos(
+    //   videos.map((vid) => {
+    //     if (vid.id === newLikedVid.id) {
+    //       return newLikedVid;
+    //     } else {
+    //       return vid;
+    //     }
+    //   })
+    // );
+  }
+
+  //UNLIKE
+  function onVidDislike(unlikedVid) {
+    setLikedList((videos) =>
+      likedList.filter((video) => video.id !== unlikedVid.id)
+    );
   }
 
   return (
@@ -43,7 +62,11 @@ function App() {
         </Route>
 
         <Route path="/mylikes">
-          <MyLikes likedList={likedList} />
+          <MyLikes
+            onVidLike={onVidLike}
+            onVidDislike={onVidDislike}
+            likedList={likedList}
+          />
         </Route>
 
         <Route path="/videos/:id">
@@ -51,7 +74,11 @@ function App() {
         </Route>
 
         <Route exact path="/">
-          <Home videos={displayVideo} onVideoLike={onVideoLike} />
+          <Home
+            videos={displayVideo}
+            onVidLike={onVidLike}
+            onVidDislike={onVidDislike}
+          />
         </Route>
         <Route path="*">
           <h2>ERROR: You found a baaad link</h2>
