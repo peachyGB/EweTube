@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function VideoPage() {
   const [vidPage, setVidPage] = useState(null);
@@ -22,7 +23,7 @@ function VideoPage() {
 
   const { title, link, description, channel, likes, comments } = vidPage;
   return (
-    <div className="video-page">
+    <div className="video-page ">
       <iframe
         width="960"
         height="540"
@@ -34,12 +35,17 @@ function VideoPage() {
         modestbranding="1"
         loading="eager"
       />
+      <div class="d-flex flex-column">
+      <div  class="p-2 ">
       <h2>{title}</h2>
-      <h4>Channel: {channel}</h4>
-      <div>Likes: {likes}</div>
+      <h4>Channel: <a href={channel} target="_blank">{channel}</a></h4>
+      {/* <div>Likes: {likes}</div> */}
+      <br />
       <p>{description}</p>
-      <h4>Comments:</h4>
-      <div>{comments}</div>
+      {/* <h4>Comments:</h4>
+      <div>{comments}</div> */}
+      </div>
+      </div>
     </div>
   );
 }

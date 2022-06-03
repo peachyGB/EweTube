@@ -8,7 +8,8 @@ function MyLikes({ likedList }) {
       id={video.id}
       channel={video.channel}
       description={video.description}
-      likes={video.likes}
+      liked={null}
+      likeCount={video.likeCount}
       link={video.link}
       title={video.title}
     />

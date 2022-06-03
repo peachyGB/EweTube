@@ -16,7 +16,7 @@ function UploadForm({ postVideo }) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    const newVideo = { title, link, description };
+    const newVideo = { title, link, description, likeCount:0, liked:true };
     handlePost(newVideo);
   } 
 
@@ -33,6 +33,7 @@ function UploadForm({ postVideo }) {
       setTitle("")
       setLink("")
       setDescription("")
+      alert("Video Sucessfully Posted!")
   }
 
   function handleTitleChange(e) {
@@ -46,7 +47,6 @@ function UploadForm({ postVideo }) {
       console.log('hi')
     }
   } 
-
   
   function handleDescriptionChange(e) {
     setDescription(e.target.value);
@@ -57,14 +57,19 @@ function UploadForm({ postVideo }) {
       <h3>Add a Video!</h3>
       <form className="form" onSubmit={handleSubmit}>
         <label className='label'><strong>Title</strong></label>
+        <br />
         <input
           type="text"
           placeholder="Title"
           name="title"
           value={title}
           onChange={handleTitleChange}
-        />  
+        />
+        <br /> 
+        <br /> 
+        
         <label className='label'><strong>Link</strong></label>
+        <p className="invalid">{!valid && link !== "" ? <strong>*Invalid Link*</strong> : ""}</p>
         <input
           type="link"
           placeholder="Link"
@@ -72,19 +77,24 @@ function UploadForm({ postVideo }) {
           value={link}
           onChange={handleLinkChange}
         />
+        <br />
+        <br />
         <label className='label'><strong>Description</strong></label>
+        <br />
         <input
           type="text"
-          placeholder="description"
+          placeholder="Description"
           name="description"
           value={description}
           onChange={handleDescriptionChange}
         /> 
-        <input className='label' type="checkbox" onChange={handleChange}></input>
+        <br />
+        <br />
         <label >
           I attest that this video is ewe related content and understand that
           falsely identifying unrelated content as ewe related is a violation of
           our terms and conditions and is punishable in a court of baa.
+          <input className='label' type="checkbox" onChange={handleChange}></input>
         </label>
         <button disabled={!ready}>Submit</button>
       </form>

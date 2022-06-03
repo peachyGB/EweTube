@@ -12,6 +12,10 @@ code {
     monospace;
 }
 
+.invalid {
+  color: red;
+}
+
 #mynavbar {
   position: absolute;
   right: 140px;
@@ -165,6 +169,10 @@ code {
   position: relative;
   top: 20px;
 }
+/* 
+.video-page {
+  align-items: left;
+} */
 
 
 

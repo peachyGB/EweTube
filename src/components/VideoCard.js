@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 function VideoCard({ id, liked, likeCount, link, title, video, onVideoLike }) {
-  const [isLiked, setIsLiked] = useState(false);
+  const [isLiked, setIsLiked] = useState(!liked);
 
   function handleLike() {
     onVideoLike(video);
@@ -30,12 +30,12 @@ function VideoCard({ id, liked, likeCount, link, title, video, onVideoLike }) {
 
       <div>
         {/* <div>Likes: </div> */}
-        <button
+        {liked !== null ? <button
           className={isLiked ? "un-like-btn" : "like-btn"}
           onClick={handleLike}
         >
         🐑,
-        </button>
+        </button> : null}
         {/* <div>{likeCount}</div> */}
       </div>
     </div>
