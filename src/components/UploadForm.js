@@ -1,10 +1,14 @@
-import React, { useState } from "react";
+import React, { useState } from "react"; 
+import validator from "validator"
 
 function UploadForm({ postVideo }) {
   const [title, setTitle] = useState("");
   const [link, setLink] = useState("");
   const [description, setDescription] = useState("");
   const [checked, setChecked] = useState(true);
+  const [valid, setValid] = useState(false)
+
+  let ready = (valid && !checked)
 
   function handleChange() {
     setChecked(!checked);
@@ -14,7 +18,7 @@ function UploadForm({ postVideo }) {
     e.preventDefault();
     const newVideo = { title, link, description };
     handlePost(newVideo);
-  }
+  } 
 
   function handlePost(newVideo) {
     fetch("http://localhost:7001/videos", {
@@ -26,6 +30,9 @@ function UploadForm({ postVideo }) {
     })
       .then((r) => r.json())
       .then((data) => postVideo(data));
+      setTitle("")
+      setLink("")
+      setDescription("")
   }
 
   function handleTitleChange(e) {
@@ -34,8 +41,13 @@ function UploadForm({ postVideo }) {
 
   function handleLinkChange(e) {
     setLink(e.target.value);
-  }
+     if (validator.isURL(e.target.value)) {
+      setValid(true)
+      console.log('hi')
+    }
+  } 
 
+  
   function handleDescriptionChange(e) {
     setDescription(e.target.value);
   }
@@ -74,10 +86,12 @@ function UploadForm({ postVideo }) {
           falsely identifying unrelated content as ewe related is a violation of
           our terms and conditions and is punishable in a court of baa.
         </label>
-        <button disabled={checked}>Submit</button>
+        <button disabled={!ready}>Submit</button>
       </form>
     </div>
   );
 }
 
 export default UploadForm;
+
+// https://www.youtube.com/embed/5XWEVoI40sE

@@ -46,33 +46,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ,
 {
-"id": 3,
-"title": "Intensive Rotational Grazing: 50 Sheep and Goats on 4 Acres",
-"link": "https://www.youtube.com/embed/UL91V2-yEZg",
-"description": "Rotational Grazing: 50 Sheep and Goats on 4 Acres. In this video, Tim talks to us about rotational grazing a large number of animals on 4 acres. What do we use? How to we make it work? Stay tuned to find out more!",
-"channel": "https://www.youtube.com/c/LinessaFarmsLLC",
-"likes": 0,
-"comments": []
-},
-{
-"id": 4,
-"title": "swiming with the sheep",
-"link": "https://www.youtube.com/embed/pbhZgL4S3lk",
-"description": "",
-"channel": "https://www.youtube.com/c/fishingwithfilitsa",
-"likes": 0,
-"comments": []
-},
-{
-"id": 5,
-"title": "Tales From Tech Support - When sheep try to kill a PC",
-"link": "https://www.youtube.com/embed/5Z0geViMH-A",
-"description": "Tales From Tech Support - When sheep try to kill a PC or... when good sheep turn baaad.",
-"channel": "https://www.youtube.com/c/UncleReddit",
-"likes": 0,
-"comments": []
-},
-{
 "id": 6,
 "title": "Shearing A Suffolk Ram ... With Scissors! Plus Treating Scald In Sheep/May 2022",
 "link": "https://www.youtube.com/embed/d2HW3W4MomU",
