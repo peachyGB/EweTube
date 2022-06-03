@@ -49,6 +49,7 @@ code {
 
 .card:hover {
   transform: scale(1.1);
+  box-shadow: 6px 8px #ff0000;
 }
 
 .search-bar {
@@ -58,7 +59,6 @@ code {
   position: fixed;
   top: 10%;
   left: 38%;
-  
 }
 
 .search-icon button {
@@ -79,7 +79,16 @@ code {
 .like-btn {
   width: 40;
   height: 40;
-  background-color: red;
+  background-color: #ff0000;
+  position: relative;
+  bottom: 50px;
+  left: 150px;
+}
+
+.un-like-btn{
+  width: 40;
+  height: 40;
+  background-color: black;
   position: relative;
   bottom: 50px;
   left: 150px;
@@ -89,6 +98,16 @@ code {
   width: 40;
   height: 40;
   transform: rotate(180deg);
+}
+
+.likes {
+  position: relative;
+  top: 20px;
+}
+
+.likes-count {
+  position: relative;
+  bottom: 10px;
 }
 
 .form {
@@ -109,9 +128,13 @@ code {
   overflow: hidden;
   text-overflow: ellipsis;
   color: black;
+  max-width: 50ch;
 }
 
 .videos {
   position: relative;
   top: 20px;
 }
+
+
+

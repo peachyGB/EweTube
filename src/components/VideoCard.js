@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 function VideoCard({ id, liked, likeCount, link, title, video, onVideoLike }) {
   const [isLiked, setIsLiked] = useState(false);
+
   function handleLike() {
     onVideoLike(video);
     setIsLiked(!isLiked);
@@ -28,14 +29,14 @@ function VideoCard({ id, liked, likeCount, link, title, video, onVideoLike }) {
       </Link>
 
       <div>
-        <div>Likes: </div>
+        {/* <div>Likes: </div> */}
         <button
           className={isLiked ? "un-like-btn" : "like-btn"}
           onClick={handleLike}
         >
-          🐑,
+        🐑,
         </button>
-        <div>{likeCount}</div>
+        {/* <div>{likeCount}</div> */}
       </div>
     </div>
   );

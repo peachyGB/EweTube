@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 function Search({ onNewSearch }) {
   const [newSearch, setNewSearch] = useState("");
+
   function handleSearch(e) {
     e.preventDefault();
     onNewSearch(newSearch);
