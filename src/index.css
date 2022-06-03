@@ -12,6 +12,35 @@ code {
     monospace;
 }
 
+#mynavbar {
+  position: absolute;
+  right: 140px;
+  text-align: center;
+}
+
+#toggler {
+  position: absolute;
+  left:110px;
+  top: 220px;
+  background-color: lightgrey;
+}
+
+#nav-link {
+  width: 60;
+  height: 60;
+  background-color: #ff0000;
+  margin-right: 10px;
+}
+
+.option-button {
+    height:60%;
+    justify-content: center;
+}
+
+.media-object {
+    height: 100px;
+}
+
 .App {
   text-align: center;
 }
@@ -56,6 +85,7 @@ code {
   overflow: hidden;
   background-color: white;
   width: 400px;
+  height: 40px;
   position: fixed;
   top: 10%;
   left: 38%;

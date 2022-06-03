@@ -17,15 +17,15 @@ function NavBar({ search, onNewSearch }) {
               <div className='search-bar'>
                 <Search search={search} onNewSearch={onNewSearch} />
               </div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+            <button id="toggler" class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
               <span class="navbar-toggler-icon"></span>
             </button>
               <div class="collapse navbar-collapse" id="mynavbar">
               <div class="navbar-nav me-auto">
-              <div class="nav-item">
-                <Link exact to="/"  class="nav-link text-dark"><strong>Home</strong> </Link>
-                <Link to="/upload" class="nav-link text-dark"> <strong>Upload Video</strong> </Link>
-                <Link to="/mylikes" class="nav-link text-dark"> <strong>My Likes</strong> </Link>
+              <div id="nav-items" class="nav-item d-lg-flex align-items-center media-object pull-left">
+                <Link exact to="/"  class="nav-link text-light btn-block col-sm-4 btn btn-danger option-button btn-outline-dark" id="nav-link"><strong>Home</strong> </Link>
+                <Link to="/upload" class="nav-link text-light btn-block col-sm-4 btn btn-danger option-button btn-outline-dark" id="nav-link"> <strong>Upload Video</strong> </Link>
+                <Link to="/mylikes" class="nav-link text-light btn-block col-sm-4 btn btn-danger option-button btn-outline-dark" id="nav-link"> <strong>My Likes</strong> </Link>
             </div>
           </div>
         </div>
