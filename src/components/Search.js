@@ -12,15 +12,17 @@ function Search({ onNewSearch }) {
     <form onSubmit={handleSearch}>
       <div class="input-group rounded border border-dark">
       <input
-        class="form-control rounded"
+        class="form-control rounded" 
         type="text"
         id="search"
         placeholder="Search..."
         value={newSearch}
         onChange={(e) => setNewSearch(e.target.value)}
       />
+      <button class="input-group-text border-0 fas fa-search" type="submit"></button>
+      <button onClick={(e) => setNewSearch("")}>clear</button>
       </div>
-       <button type="submit"></button>
+      
       
     </form>
   );
